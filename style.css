@@ -1,0 +1,112 @@
+" ":root {
+    --primary-color: #333;
+    --secondary-color: #2c2c2c;
+    --accent-color: #c3e536; /* vurgu rengi */
+    --text-color: #fff;
+    --background-color: #1a1a1a;
+    --button-bg: #333;
+    --button-hover: #555;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0; /* tüm elementlerin dış boşluklarını sıfırlar */
+    padding: 0; /* tüm elementlerin iç boşluklarını( içerik ile kenarlık arasındaki boşluk) sıfırlar */
+}
+
+body {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center; /* içeriği yatay olarak ortalar */
+    align-items: center; /* içeriği dikey olarak ortalar */
+    font-family: 'Courier New', monospace; 
+    color: var(--text-color);
+    padding: 20px;
+}
+
+main {
+    width: 100%;
+    display: flex; /* flexbox kullanımı */
+    justify-content: center; /* içeriği yatay olarak ortalar */
+}
+
+.blog-card {
+    background-color: var(--secondary-color);
+    border-radius: 12px; /* yuvarlatılmış köşeler */
+    padding: 40px;
+    max-width: 384px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* hafif gölge efekti */
+}
+
+.blog-card img {
+    width: 104px;
+    height: 104px;
+    border-radius: 50%;
+    margin-bottom: 24px;
+    object-fit: cover; /* resmi kırparak kutuya sığdırır */
+}
+
+.info-section h1 {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 8px; /* başlık ile konum arasındaki boşluk */
+    color: var(--text-color);
+}
+
+.info-section .location {
+    color: var(--accent-color);
+    font-size: 14px;
+    margin-bottom: 16px;
+    font-weight: 500;
+}
+
+.info-section .description {
+    color: var(--text-color);
+    font-size: 14px;
+    margin-bottom: 24px;
+    line-height: 1.5; /* satır yüksekliği */
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;/* dikey hizalama */
+    gap: 12px;/* butonlar arasındaki boşluk */
+}
+
+.social-link {
+    display: block;
+    background-color: var(--button-bg);
+    color: var(--text-color);
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none; /* alt çizgi kaldırma */
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease; /* pürüzsüz geçiş efekti */
+    border: 1px solid var(--button-bg);
+}
+
+.social-link:hover {
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+    border-color: var(--accent-color);
+}
+
+.attribution { /* alt metin stili */
+    font-size: 11px;
+    text-align: center;
+    margin-top: 30px;
+    color: #888;
+}
+
+.attribution a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.attribution a:hover {
+    text-decoration: underline;
+}

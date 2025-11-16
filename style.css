@@ -1,10 +1,14 @@
-" ":root {
+:root {
     --primary-color: #333;
-    --secondary-color: #2c2c2c;
-    --accent-color: #c3e536; /* vurgu rengi */
-    --text-color: #fff;
+    --secondary-color: #2c2c2c;      /* Kart Arkaplanı */
+    --accent-color: #c3e536;         /* Vurgu rengi (Yeşil) */
+    --text-color: #fff;              /* Yazı rengi (Beyaz) */
     --background-color: #1a1a1a;
-    --button-bg: #333;
+    
+    /* ÇÖZÜM: Düğme arkaplanını karttan biraz daha açık yaptık. */
+    --button-bg: #383838;            
+    /* Eskiden #333 idi. #383838, #2c2c2c'ye göre daha belirgindir. */
+    
     --button-hover: #555;
 }
 
@@ -15,7 +19,7 @@
 }
 
 body {
-    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    background:  #1a1a1a;
     min-height: 100vh;
     display: flex;
     justify-content: center; /* içeriği yatay olarak ortalar */
